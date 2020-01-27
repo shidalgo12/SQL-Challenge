@@ -1,0 +1,42 @@
+Departments
+-
+Dept_No FK >- Dept_Employees.Dept_No
+Dept_Name
+
+Employees
+-
+Employee_No FK >- Dept_Manager.Employee_No
+Birth_Date
+First_Name
+Last_Name
+Gender
+From_Date
+To_Date
+
+Dept_Employees
+-
+Employee_No FK >- Dept_Manager.Employee_No
+Dept_No
+From_Date
+To_Date
+
+Dept_Manager
+-
+Dept_No
+Employee_No
+From_Date
+To_Date
+
+Salaries
+-
+Employee_No FK >- Dept_Manager.Employee_No
+Salary
+From_Date
+To_Date
+
+Titles
+-
+Employee_No
+Title
+From_Date
+To_Date
