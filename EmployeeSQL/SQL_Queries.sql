@@ -16,11 +16,12 @@ FROM dept_manager, departments, employees
 WHERE dept_manager.dept_no = departments.dept_no AND dept_manager.emp_no = employees.emp_no
 ORDER BY "dept_no" ASC;
 
---List the department of each employee with the following information: employee number, last name, first name, and department name.
+--List the department of each employee with the following information: 
+--employee number, last name, first name, and department name.
 SELECT dept_emp.emp_no, employees.first_name, employees.last_name, departments.dept_name
 FROM dept_emp, employees, departments
 WHERE dept_emp.emp_no = employees.emp_no AND dept_emp.dept_no = departments.dept_no AND 
-	--select department from the latest from_date
+	--select department from the latest "from_date"
 	(dept_emp.emp_no, dept_emp.from_date) in(
 		select emp_no, max(from_date)as from_date 
 		from dept_emp 
@@ -41,7 +42,9 @@ FROM employees
 WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
 
 --List all employees in the Sales department, including their employee number, last name, first name, and department name.
---tables dept_emp & employees
+SELECT dept_emp.emp_no, employees.last_name, employees.first_name, departments.dept_name
+FROM dept_emp, employees, departments
+WHERE dept_emp.emp_no = employees.emp_no AND departments.dept_name = 'Sales'
 
 --List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 --tables dept_emp & employees
