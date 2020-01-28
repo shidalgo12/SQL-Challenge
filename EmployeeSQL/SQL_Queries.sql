@@ -9,11 +9,28 @@ SELECT *
 FROM employees
 WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31'
 
---List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates.
-
+--List the manager of each department with the following information: 
+--department number , department name, the manager's employee number, last name, first name, and start and end employment dates.
+--Tables: departments(department name), dept_manager (department number,the manager's employee number,start and end employment dates) & employees (first name, last name)
 
 --List the department of each employee with the following information: employee number, last name, first name, and department name.
+SELECT dept_emp.emp_no, employees.first_name, employees.last_name, departments.dept_name
+FROM dept_emp, employees, departments
+WHERE dept_emp.emp_no = employees.emp_no AND dept_emp.dept_no = departments.dept_no AND 
+	--select department from the latest from_date
+	(dept_emp.emp_no, dept_emp.from_date) in(
+		select emp_no, max(from_date)as from_date 
+		from dept_emp 
+		group by emp_no
+	);
 
+select username, date, value
+from tablename where (username, date) in (
+    select username, max(date) as date
+    from tablename
+    group by username
+)
+--find department from latest from-date;
 
 --List all employees whose first name is "Hercules" and last names begin with "B."
 SELECT *
@@ -21,10 +38,11 @@ FROM employees
 WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
 
 --List all employees in the Sales department, including their employee number, last name, first name, and department name.
-
+--tables dept_emp & employees
 
 --List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
-
+--tables dept_emp & employees
+--identify dept_no of sales and development
 
 --In descending order, how many employees share each last name.
 SELECT last_name, COUNT(last_name) AS "employee count"
