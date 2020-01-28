@@ -35,8 +35,7 @@ WHERE dept_emp.emp_no = employees.emp_no AND dept_emp.dept_no = departments.dept
     --group by username)
 	--https://stackoverflow.com/questions/2411559/how-do-i-query-sql-for-a-latest-record-date-for-each-user;
 	
-
---List all employees whose first name is "Hercules" and last names begin with "B."
+--List all employees whose first name is "Hercules" and last names begin with "B"
 SELECT *
 FROM employees
 WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
@@ -47,9 +46,10 @@ FROM dept_emp, employees, departments
 WHERE dept_emp.emp_no = employees.emp_no AND departments.dept_name = 'Sales'
 
 --List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
---tables dept_emp & employees
---identify dept_no of sales and development
-
+SELECT dept_emp.emp_no, employees.last_name, employees.first_name, departments.dept_name
+FROM dept_emp, employees, departments
+WHERE dept_emp.emp_no = employees.emp_no AND ((departments.dept_name = 'Sales') OR (departments.dept_name = 'Development')) 
+											  
 --In descending order, how many employees share each last name.
 SELECT last_name, COUNT(last_name) AS "employee count"
 FROM employees
