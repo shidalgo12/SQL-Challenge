@@ -7,11 +7,14 @@ WHERE employees.emp_no = salaries.emp_no;
 --List employees who were hired in 1986.
 SELECT *
 FROM employees
-WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31'
+WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31';
 
 --List the manager of each department with the following information: 
 --department number , department name, the manager's employee number, last name, first name, and start and end employment dates.
---Tables: departments(department name), dept_manager (department number,the manager's employee number,start and end employment dates) & employees (first name, last name)
+SELECT dept_manager.dept_no, departments.dept_name, dept_manager.emp_no, employees.last_name, employees.first_name,dept_manager.from_date,dept_manager.to_date
+FROM dept_manager, departments, employees
+WHERE dept_manager.dept_no = departments.dept_no AND dept_manager.emp_no = employees.emp_no
+ORDER BY "dept_no" ASC;
 
 --List the department of each employee with the following information: employee number, last name, first name, and department name.
 SELECT dept_emp.emp_no, employees.first_name, employees.last_name, departments.dept_name
@@ -23,14 +26,14 @@ WHERE dept_emp.emp_no = employees.emp_no AND dept_emp.dept_no = departments.dept
 		from dept_emp 
 		group by emp_no
 	);
-
-select username, date, value
-from tablename where (username, date) in (
-    select username, max(date) as date
-    from tablename
-    group by username
-)
---find department from latest from-date;
+	
+--select username, date, value
+--from tablename where (username, date) in (
+    --select username, max(date) as date
+    --from tablename
+    --group by username)
+	--https://stackoverflow.com/questions/2411559/how-do-i-query-sql-for-a-latest-record-date-for-each-user;
+	
 
 --List all employees whose first name is "Hercules" and last names begin with "B."
 SELECT *
