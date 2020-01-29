@@ -1,42 +1,43 @@
 --Create Tables
-create table departments(
-	dept_no varchar,
+
+CREATE TABLE departments(
+	dept_no VARCHAR(4) PRIMARY KEY,
 	dept_name varchar
 );
 
-create table dept_emp(
+CREATE TABLE dept_emp(
 	emp_no INT,
-	dept_no varchar,
+	dept_no VARCHAR,
 	from_date DATE,
 	to_date DATE
 );
 
-create table dept_manager(
-	dept_no varchar,
+CREATE TABLE dept_manager(
+	dept_no VARCHAR,
 	emp_no INT,
 	from_date DATE,
 	to_date DATE
 );
 
-create table employees(
-	emp_no INT,
+CREATE TABLE employees(
+	emp_no INT PRIMARY KEY,
 	birth_date DATE,
-	first_name varchar,
-	last_name varchar,
-	gender varchar,
+	first_name VARCHAR,
+	last_name VARCHAR,
+	gender VARCHAR,
 	hire_date DATE
 );
 
-create table salaries(
-	emp_no INT,
+CREATE TABLE salaries(
+	emp_no INT PRIMARY KEY,
 	salary INT,
 	from_date DATE,
 	to_date DATE
 );
 
-create table titles(
+CREATE TABLE titles(
 	emp_no INT,
-	title varchar,
+	title VARCHAR,
 	from_date DATE,
 	to_date DATE
 );
