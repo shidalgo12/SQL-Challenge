@@ -5,7 +5,6 @@ create table departments(
 );
 
 create table dept_emp(
-	dept_emp_no varchar,
 	emp_no INT,
 	dept_no varchar,
 	from_date DATE,
