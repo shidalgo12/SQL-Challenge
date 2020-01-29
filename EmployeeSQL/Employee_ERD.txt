@@ -36,7 +36,7 @@ To_Date
 
 Titles
 -
-Title PK
-Employee_No FK >- Salaries.Employee_No
+Employee_No PK FK >- Dept_Manager.Employee_No
+Title
 From_Date
 To_Date
