@@ -15,7 +15,7 @@ To_Date
 
 Dept_Employees
 -
-Employee_No pk
+Employee_No pk FK >- Employees.Employee_No
 Dept_No FK >- Departments.Dept_No
 From_Date
 To_Date
@@ -29,14 +29,15 @@ To_Date
 
 Salaries
 -
-Employee_No PK FK >- Dept_Manager.Employee_No
+Employee_No PK FK >- Employees.Employee_No
 Salary
 From_Date
 To_Date
 
 Titles
 -
-Employee_No PK FK >- Dept_Manager.Employee_No
+Employee_No PK FK >- Employees.Employee_No
 Title
 From_Date
 To_Date
+
