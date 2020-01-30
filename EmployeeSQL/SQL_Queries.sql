@@ -50,7 +50,7 @@ ORDER BY last_name ASC;
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e, departments d, dept_emp de
 WHERE d.dept_name = 'Sales' AND de.dept_no = 'd007' AND e.emp_no = de.emp_no AND to_date = '9999-01-01'
-GROUP BY e.emp_no, e.last_name, e.first_name, d.dept_name
+GROUP BY e.emp_no, e.last_name, e.first_name, d.dept_name;
 
 --List all employees currently in the Sales and Development departments, including:
 --employee number, last name, first name, and department name.

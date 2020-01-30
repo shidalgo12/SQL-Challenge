@@ -5,6 +5,15 @@ CREATE TABLE departments(
 	dept_name varchar
 );
 
+CREATE TABLE employees(
+	emp_no INT PRIMARY KEY,
+	birth_date DATE,
+	first_name VARCHAR,
+	last_name VARCHAR,
+	gender VARCHAR,
+	hire_date DATE
+);
+
 CREATE TABLE dept_emp(
 	emp_no INT,
 	dept_no VARCHAR,
@@ -19,17 +28,8 @@ CREATE TABLE dept_manager(
 	to_date DATE
 );
 
-CREATE TABLE employees(
-	emp_no INT PRIMARY KEY,
-	birth_date DATE,
-	first_name VARCHAR,
-	last_name VARCHAR,
-	gender VARCHAR,
-	hire_date DATE
-);
-
 CREATE TABLE salaries(
-	emp_no INT PRIMARY KEY,
+	emp_no INT,
 	salary INT,
 	from_date DATE,
 	to_date DATE
