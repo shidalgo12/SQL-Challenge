@@ -7,7 +7,7 @@
 ## Data Modeling
 
 Entity Relationship Diagram (ERD) structured to illustrate the correlations among 6 csv files.
-![](Employee_ERD.png)
+![](EmployeeSQL/Employee_ERD.png)
 
 ## Data Engineering
 
