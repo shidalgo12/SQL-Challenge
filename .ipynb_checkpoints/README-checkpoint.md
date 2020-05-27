@@ -2,7 +2,7 @@
 
 ## Background
 
-6 CSV files analyzed to research employees of a given corporation from the 1980s and 1990s. Data Modeling, Data Engineering & Data Analysis completed to organized data and query employee information by specified quota. 
+6 CSV files analyzed to research employees of a given corporation from the 1980s and 1990s. Data Modeling, Data Engineering & Data Analysis completed to organize data and query employee information by specified quota. 
 
 ## Data Modeling
 
