@@ -22,15 +22,15 @@ Data joined, grouped, sorted and queried to identify the following: employee sal
 
 ### Examples
 
-* Employee Salaries
+### EMPLOYEE SALARIES
 ![](EmployeeSQL/Images/Salary.png)
 
-* Employee Hiring Dates
+### EMPLOYEE HIRING DATES
 ![](EmployeeSQL/Images/Hire_Dates.png)
 
-* Department Managers
+### DEPARTMENT MANAGERS
 ![](EmployeeSQL/Images/Dept_Manager.png)
 
-* Employee Departments
+### EMPLOYEE DEPARTMENTS
 ![](EmployeeSQL/Images/Employee_Dept.png)
 ![](EmployeeSQL/Images/Employee_Dept_Output.png)
