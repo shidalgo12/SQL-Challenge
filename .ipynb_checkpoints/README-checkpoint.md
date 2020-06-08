@@ -2,17 +2,35 @@
 
 ## Background
 
-6 CSV files analyzed to research employees of a given corporation from the 1980s and 1990s. Data Modeling, Data Engineering & Data Analysis completed to organize data and query employee information by specified quota. 
+Six CSV files observed to research employees of a given corporation from the 1980s and 1990s. Data Modeling, Data Engineering & Data Analysis completed to organize data and query employee information by specified quota. 
 
 ## Data Modeling
 
-Entity Relationship Diagram (ERD) structured to illustrate the correlations among 6 csv files.
-![](EmployeeSQL/Employee_ERD.png)
+Entity Relationship Diagram (ERD) structured to illustrate the correlations among six csv files.
+![](EmployeeSQL/Images/Employee_ERD.png)
 
 ## Data Engineering
 
 Table schemas created for each CSV file. Data types, primary keys, foreign keys, and other constraints identified.  CSV files imported into the corresponding SQL tables.
 
+### Example
+![](EmployeeSQL/Images/Table.png)
+
 ## Data Analysis
 
-Data grouped, sorted and queried to identify employee hiring dates, department managers, department employees, employees by name, and more.
+Data joined, grouped, sorted and queried to identify the following: employee salaries, hiring dates, department managers, employee departments, employees by name, and more.
+
+### Examples
+
+* Employee Salaries
+![](EmployeeSQL/Images/Salary.png)
+
+* Employee Hiring Dates
+![](EmployeeSQL/Images/Hire_Dates.png)
+
+* Department Managers
+![](EmployeeSQL/Images/Dept_Manager.png)
+
+* Employee Departments
+![](EmployeeSQL/Images/Employee_Dept.png)
+![](EmployeeSQL/Images/Employee_Dept_Output.png)
