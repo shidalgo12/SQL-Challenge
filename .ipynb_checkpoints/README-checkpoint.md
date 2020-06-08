@@ -2,7 +2,7 @@
 
 ## Background
 
-Six CSV files observed to research employees of a given corporation from the 1980s and 1990s. Data Modeling, Data Engineering & Data Analysis completed to organize data and query employee information by specified quota. 
+Six CSV files observed to research employees of a given corporation from the 1980s and 1990s. Data Modeling, Data Engineering & Data Analysis completed to organize data and query employee information by specified quota.  Queries executed in pgAdmin, a popular management tool for PostgreSQL.
 
 ## Data Modeling
 
