@@ -13,14 +13,14 @@ Entity Relationship Diagram (ERD) structured to illustrate the correlations amon
 
 Table schemas created for each CSV file. Data types, primary keys, foreign keys, and other constraints identified.  CSV files imported into the corresponding SQL tables.
 
-### Example
+### EXAMPLE
 ![](EmployeeSQL/Images/Table.png)
 
 ## Data Analysis
 
 Data joined, grouped, sorted and queried to identify the following: employee salaries, hiring dates, department managers, employee departments, employees by name, and more.
 
-### Examples
+### EXAMPLES
 
 ### EMPLOYEE SALARIES
 ![](EmployeeSQL/Images/Salary.png)
