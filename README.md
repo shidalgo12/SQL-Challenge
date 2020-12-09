@@ -7,7 +7,7 @@ Six CSV files observed to research employees of a given corporation from the 198
 ## Data Modeling
 
 Entity Relationship Diagram (ERD) structured to illustrate the correlations among six csv files.
-![](EmployeeSQL/Images/Employee_ERD.png)
+![](EmployeeSQL/ERD.png)
 
 ## Data Engineering
 
